@@ -5,7 +5,6 @@ import Paragraph from './components/Paragraph';
 import CreateUser from './components/CreateUser';
 import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
-import HandleLogin from './components/HandleLogin';
 import { useState, useEffect} from 'react';
 import {gapi} from "gapi-script";
 //import { Octokit } from "octokit";
