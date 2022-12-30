@@ -7,7 +7,7 @@ import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
 import { useState, useEffect} from 'react';
 import {gapi} from "gapi-script";
-import { Octokit } from "octokit";
+//import { Octokit } from "octokit";
 
 
 function App() {
@@ -55,20 +55,20 @@ function App() {
    }, []);
 	
   // Add handleclick
-  function handleClick() {
-    const handleClick = async () => {
-	  console.log("handleclick")
-	  const octokit = new Octokit({
-  		auth: process.env.TOKEN,
-	})
-    await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
-  	owner: '2115-27',
-  	repo: 'react-login-page',
-  	workflow_id: 'Reuseable-A.yml',
-  	ref: 'main'  
-	})
-    }
-  }
+//   function handleClick() {
+//     const handleClick = async () => {
+// 	  console.log("handleclick")
+// 	  const octokit = new Octokit({
+//   		auth: process.env.TOKEN,
+// 	})
+//     await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
+//   	owner: '2115-27',
+//   	repo: 'react-login-page',
+//   	workflow_id: 'Reuseable-A.yml',
+//   	ref: 'main'  
+// 	})
+//     }
+//   }
 
   // Add New User
   function addNewUser(newUser) {
@@ -112,7 +112,7 @@ function App() {
                  <label>Model Type </label>
                  <input type="text" name="pass" required />
                </div>
-               <button onClick={handleClick}>BUILD</button>
+               <button>BUILD</button>
              </form>
             </header>
           </div>,
