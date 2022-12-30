@@ -143,7 +143,7 @@ function App() {
          {/* right side of the page (main thema) */}
         <div className='col-lg-6 col-md-12 bg'>
           <div className='p-3 w-75 mainHeading'>
-            <Heading title="Your diet is a bank account. Good food choices are good investments." />
+            <Heading title="Login to continue" />
           </div>
         </div>
       
