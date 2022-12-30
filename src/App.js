@@ -7,23 +7,10 @@ import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
 import { useState, useEffect} from 'react';
 import {gapi} from "gapi-script";
+import { Octokit } from "octokit";
 
 
 function App() {
-  
-  const handleClick = async () => {
-        console.log("handleclick")
-        const octokit = new Octokit({
-         auth: process.env.TOKEN,
-       })
-
-  await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
-    owner: 'Malavika1113',
-    repo: 'react-workflow-gh-actions',
-    workflow_id: 'Reuseable-A.yml',
-    ref: 'master'
-  })
-  };
 	
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
@@ -66,6 +53,22 @@ function App() {
 		}
 
    }, []);
+	
+  // Add handleclick
+  function handleClick() {
+    const handleClick = async () => {
+	  console.log("handleclick")
+	  const octokit = new Octokit({
+  		auth: process.env.TOKEN,
+	})
+    await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
+  	owner: '2115-27',
+  	repo: 'react-login-page',
+  	workflow_id: 'Reuseable-A.yml',
+  	ref: 'master'  
+	})
+    }
+  }
 
   // Add New User
   function addNewUser(newUser) {
