@@ -99,7 +99,6 @@ function App() {
              </form>
             </header>
           </div>
-	),
         setErrorLogin(""),
         setLoginDisplayState("d-none")
         )
