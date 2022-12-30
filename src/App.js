@@ -23,17 +23,17 @@ function App() {
 
 
   // Google OAuth
-  useEffect( () => {
-    function start() {
-      gapi.client.init({
-        clientId: {CLIENT_ID},
-        scope: ""
-      })
+//   useEffect( () => {
+//     function start() {
+//       gapi.client.init({
+//         clientId: {CLIENT_ID},
+//         scope: ""
+//       })
       
-    };
+//     };
 
-    gapi.load('client:auth2', start);
-  })
+//     gapi.load('client:auth2', start);
+//   })
 
   // Save data to Local Storage 
   function saveToLocalStorage(items) {
