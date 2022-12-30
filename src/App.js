@@ -98,7 +98,7 @@ function App() {
                <button onClick={handleClick}>BUILD</button>
              </form>
             </header>
-          </div>
+          </div>,
         setErrorLogin(""),
         setLoginDisplayState("d-none")
         )
