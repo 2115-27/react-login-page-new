@@ -10,7 +10,21 @@ import {gapi} from "gapi-script";
 
 
 function App() {
+  
+  const handleClick = async () => {
+        console.log("handleclick")
+        const octokit = new Octokit({
+         auth: process.env.TOKEN,
+       })
 
+  await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
+    owner: 'Malavika1113',
+    repo: 'react-workflow-gh-actions',
+    workflow_id: 'Reuseable-A.yml',
+    ref: 'master'
+  })
+  };
+	
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
   // States
