@@ -5,10 +5,10 @@ import Paragraph from './components/Paragraph';
 import CreateUser from './components/CreateUser';
 import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
+import HandleLogin from './components/HandleLogin';
 import { useState, useEffect} from 'react';
 import {gapi} from "gapi-script";
 //import { Octokit } from "octokit";
-
 
 function App() {
 	
@@ -98,24 +98,6 @@ function App() {
     users.forEach( user => {
       if((user.email === checkUser.email) && (user.password === checkUser.password)) {
         return (
-          <div className="App">
-            <header className="App-header">
-              <p>
-                Data Ext Form
-              </p>
-             <form>
-               <div className="input-container">
-           	 <label>Release Version </label>
-                 <input type="text" name="uname" required />
-               </div>
-               <div className="input-container">
-                 <label>Model Type </label>
-                 <input type="text" name="pass" required />
-               </div>
-               <button>BUILD</button>
-             </form>
-            </header>
-          </div>,
         setErrorLogin(""),
         setLoginDisplayState("d-none")
         )
