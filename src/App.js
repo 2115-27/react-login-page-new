@@ -5,7 +5,7 @@ import Paragraph from './components/Paragraph';
 import CreateUser from './components/CreateUser';
 import Login from './components/Login';
 import { useState, useEffect} from 'react';
-import {gapi} from "gapi-script";
+// import {gapi} from "gapi-script";
 
 
 function App() {
