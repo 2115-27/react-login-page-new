@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Heading from './components/Heading';
 import Paragraph from './components/Paragraph';
 import CreateUser from './components/CreateUser';
-import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
 import { useState, useEffect} from 'react';
 import {gapi} from "gapi-script";
@@ -79,8 +78,7 @@ function App() {
     users.forEach( user => {
       if((user.email === checkUser.email) && (user.password === checkUser.password)) {
         return (setFormTitles({
-          formTitle:"Welcome to freshland...",
-          formSubtitle:"Your account has been successfully created."
+          formTitle:"Your account has been successfully created."
         }),
         setErrorLogin(""),
         setLoginDisplayState("d-none")
@@ -112,10 +110,10 @@ function App() {
             addUser={addNewUser}
             displayState={displayState}
             />
-          <LoginGoogle 
-            displayState={displayState}
-            googleText="Sign up with Google"
-          />
+//           <LoginGoogle 
+//             displayState={displayState}
+//             googleText="Sign up with Google"
+//           />
                     </div>
 
           <div className="footerP">
@@ -130,9 +128,9 @@ function App() {
             <Login 
               loginDisplayState={loginDisplayState}
               checkTheUser={checkTheUser} />            
-            <LoginGoogle 
-              displayState={loginDisplayState}
-              googleText="Login with Google"/>
+//             <LoginGoogle 
+//               displayState={loginDisplayState}
+//               googleText="Login with Google"/>
           </div>
 
         </div>
