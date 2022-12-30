@@ -1,4 +1,13 @@
 import { useState } from "react";
+import HandleLogin from './components/HandleLogin';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+
 
 function Login(props) {
 
@@ -52,6 +61,12 @@ function Login(props) {
                 email: "",
                 password: ""
             });
+            <Router>
+                <Switch>
+                  <Route exact path="/" component={HandleLogin} />
+                  <Redirect to="/" />
+                </Switch>
+              </Router>
         }
         event.preventDefault();
     }
