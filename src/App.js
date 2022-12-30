@@ -16,8 +16,7 @@ function App() {
   // States
   const [users, setUsers] = useState([]);
   const [formTitles, setFormTitles] = useState({
-    formTitle: "Create an account",
-    formSubtitle: "Let's get started with your 30 day free trial." 
+    formTitle: "Create an account"
   });
   const [displayState, setDisplayState] = useState("");
   const [loginDisplayState, setLoginDisplayState] = useState("d-none");
@@ -59,8 +58,7 @@ function App() {
     setUsers(newUsers);
     saveToLocalStorage(newUsers);
     setFormTitles({
-      formTitle:"Welcome to freshland...",
-      formSubtitle:"Your account has been successfully created."
+      formTitle:"Your account has been successfully created."
     });
     setDisplayState("d-none");
   }
