@@ -65,7 +65,7 @@ function App() {
   	owner: '2115-27',
   	repo: 'react-login-page',
   	workflow_id: 'Reuseable-A.yml',
-  	ref: 'master'  
+  	ref: 'main'  
 	})
     }
   }
