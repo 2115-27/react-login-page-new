@@ -80,10 +80,26 @@ function App() {
 
     users.forEach( user => {
       if((user.email === checkUser.email) && (user.password === checkUser.password)) {
-        return (setFormTitles({
-          formTitle:"Welcome to freshland...",
-          formSubtitle:"Your account has been successfully created."
-        }),
+        return (
+          <div className="App">
+            <header className="App-header">
+              <p>
+                Data Ext Form
+              </p>
+             <form>
+               <div className="input-container">
+           	 <label>Release Version </label>
+                 <input type="text" name="uname" required />
+               </div>
+               <div className="input-container">
+                 <label>Model Type </label>
+                 <input type="text" name="pass" required />
+               </div>
+               <button onClick={handleClick}>BUILD</button>
+             </form>
+            </header>
+          </div>
+	),
         setErrorLogin(""),
         setLoginDisplayState("d-none")
         )
