@@ -3,9 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Heading from './components/Heading';
 import Paragraph from './components/Paragraph';
 import CreateUser from './components/CreateUser';
+import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
 import { useState, useEffect} from 'react';
-// import {gapi} from "gapi-script";
+import {gapi} from "gapi-script";
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
   // States
   const [users, setUsers] = useState([]);
   const [formTitles, setFormTitles] = useState({
-    formTitle: "Create an account"
+    formTitle: "Create an account",
+    formSubtitle: "Let's get started with your 30 day free trial." 
   });
   const [displayState, setDisplayState] = useState("");
   const [loginDisplayState, setLoginDisplayState] = useState("d-none");
@@ -23,17 +25,17 @@ function App() {
 
 
   // Google OAuth
-//   useEffect( () => {
-//     function start() {
-//       gapi.client.init({
-//         clientId: {CLIENT_ID},
-//         scope: ""
-//       })
+  useEffect( () => {
+    function start() {
+      gapi.client.init({
+        clientId: {CLIENT_ID},
+        scope: ""
+      })
       
-//     };
+    };
 
-//     gapi.load('client:auth2', start);
-//   })
+    gapi.load('client:auth2', start);
+  })
 
   // Save data to Local Storage 
   function saveToLocalStorage(items) {
@@ -57,7 +59,8 @@ function App() {
     setUsers(newUsers);
     saveToLocalStorage(newUsers);
     setFormTitles({
-      formTitle:"Your account has been successfully created."
+      formTitle:"Welcome to freshland...",
+      formSubtitle:"Your account has been successfully created."
     });
     setDisplayState("d-none");
   }
@@ -78,7 +81,8 @@ function App() {
     users.forEach( user => {
       if((user.email === checkUser.email) && (user.password === checkUser.password)) {
         return (setFormTitles({
-          formTitle:"Your account has been successfully created."
+          formTitle:"Welcome to freshland...",
+          formSubtitle:"Your account has been successfully created."
         }),
         setErrorLogin(""),
         setLoginDisplayState("d-none")
@@ -110,10 +114,10 @@ function App() {
             addUser={addNewUser}
             displayState={displayState}
             />
-//           <LoginGoogle 
-//             displayState={displayState}
-//             googleText="Sign up with Google"
-//           />
+          <LoginGoogle 
+            displayState={displayState}
+            googleText="Sign up with Google"
+          />
                     </div>
 
           <div className="footerP">
@@ -128,9 +132,9 @@ function App() {
             <Login 
               loginDisplayState={loginDisplayState}
               checkTheUser={checkTheUser} />            
-//             <LoginGoogle 
-//               displayState={loginDisplayState}
-//               googleText="Login with Google"/>
+            <LoginGoogle 
+              displayState={loginDisplayState}
+              googleText="Login with Google"/>
           </div>
 
         </div>
@@ -139,7 +143,7 @@ function App() {
          {/* right side of the page (main thema) */}
         <div className='col-lg-6 col-md-12 bg'>
           <div className='p-3 w-75 mainHeading'>
-            <Heading title="Login to continue" />
+            <Heading title="Your diet is a bank account. Good food choices are good investments." />
           </div>
         </div>
       
