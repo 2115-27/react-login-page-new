@@ -5,21 +5,21 @@ import Paragraph from './components/Paragraph';
 import CreateUser from './components/CreateUser';
 import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
-import { useState, useEffect} from 'react';
-import {gapi} from "gapi-script";
+import { useState, useEffect } from 'react';
+import { gapi } from "gapi-script";
 //import { Octokit } from "octokit";
 /* eslint-disable no-unused-vars */
-import HandleLogin from './components/HandleLogin';
+// import HandleLogin from './components/HandleLogin';
 /* eslint-enable no-unused-vars */
 function App() {
-	
+
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 
   // States
   const [users, setUsers] = useState([]);
   const [formTitles, setFormTitles] = useState({
     formTitle: "Create an account",
-    formSubtitle: "Let's get started with your 30 day free trial." 
+    formSubtitle: "Let's get started with your 30 day free trial."
   });
   const [displayState, setDisplayState] = useState("");
   const [loginDisplayState, setLoginDisplayState] = useState("d-none");
@@ -27,13 +27,13 @@ function App() {
 
 
   // Google OAuth
-  useEffect( () => {
+  useEffect(() => {
     function start() {
       gapi.client.init({
-        clientId: {CLIENT_ID},
+        clientId: { CLIENT_ID },
         scope: ""
       })
-      
+
     };
 
     gapi.load('client:auth2', start);
@@ -41,35 +41,35 @@ function App() {
 
   // Save data to Local Storage 
   function saveToLocalStorage(items) {
-	  localStorage.setItem('users-database', JSON.stringify(items));
+    localStorage.setItem('users-database', JSON.stringify(items));
   }
 
   useEffect(() => {
-		const users = JSON.parse(
-			localStorage.getItem('users-database')
-		);
+    const users = JSON.parse(
+      localStorage.getItem('users-database')
+    );
 
-		if (users) {
-			setUsers(users);
-		}
+    if (users) {
+      setUsers(users);
+    }
 
-   }, []);
-	
+  }, []);
+
   // Add handleclick
-//   function handleClick() {
-//     const handleClick = async () => {
-// 	  console.log("handleclick")
-// 	  const octokit = new Octokit({
-//   		auth: process.env.TOKEN,
-// 	})
-//     await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
-//   	owner: '2115-27',
-//   	repo: 'react-login-page',
-//   	workflow_id: 'Reuseable-A.yml',
-//   	ref: 'main'  
-// 	})
-//     }
-//   }
+  //   function handleClick() {
+  //     const handleClick = async () => {
+  // 	  console.log("handleclick")
+  // 	  const octokit = new Octokit({
+  //   		auth: process.env.TOKEN,
+  // 	})
+  //     await octokit.request('POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches', {
+  //   	owner: '2115-27',
+  //   	repo: 'react-login-page',
+  //   	workflow_id: 'Reuseable-A.yml',
+  //   	ref: 'main'  
+  // 	})
+  //     }
+  //   }
 
   // Add New User
   function addNewUser(newUser) {
@@ -77,8 +77,8 @@ function App() {
     setUsers(newUsers);
     saveToLocalStorage(newUsers);
     setFormTitles({
-      formTitle:"Welcome to freshland...",
-      formSubtitle:"Your account has been successfully created."
+      formTitle: "Welcome to freshland...",
+      formSubtitle: "Your account has been successfully created."
     });
     setDisplayState("d-none");
   }
@@ -86,8 +86,8 @@ function App() {
   // Login 
   function isHaveAccount() {
     setFormTitles({
-      formTitle:"Login",
-      formSubtitle:""
+      formTitle: "Login",
+      formSubtitle: ""
     });
     setDisplayState("d-none");
     setLoginDisplayState("");
@@ -96,11 +96,11 @@ function App() {
   // Check the user
   function checkTheUser(checkUser) {
 
-    users.forEach( user => {
-      if((user.email === checkUser.email) && (user.password === checkUser.password)) {
+    users.forEach(user => {
+      if ((user.email === checkUser.email) && (user.password === checkUser.password)) {
         return (
-        setErrorLogin(""),
-        setLoginDisplayState("d-none")
+          setErrorLogin(""),
+          setLoginDisplayState("d-none")
         )
       } else {
         setErrorLogin("Your email or password is incorrect.")
@@ -117,51 +117,51 @@ function App() {
 
         {/* left side of the page (form) */}
         <div className='col-lg-6 col-md-12 d-flex align-items-center justify-content-center flex-column formDiv'>
-          
+
           <div className="w-50">
             <Heading title={formTitles.formTitle} />
           </div>
           <Paragraph subtitle={formTitles.formSubtitle} />
-          <p className="w-50" style={{color: "red"}}>{errorLogin}</p>
+          <p className="w-50" style={{ color: "red" }}>{errorLogin}</p>
           <div className='w-50'>
 
-          <CreateUser 
-            addUser={addNewUser}
-            displayState={displayState}
+            <CreateUser
+              addUser={addNewUser}
+              displayState={displayState}
             />
-          <LoginGoogle 
-            displayState={displayState}
-            googleText="Sign up with Google"
-          />
-                    </div>
+            <LoginGoogle
+              displayState={displayState}
+              googleText="Sign up with Google"
+            />
+          </div>
 
           <div className="footerP">
             <div className={displayState}>
               <Paragraph subtitle="Already have an account?" />
-              <span onClick={isHaveAccount}  className="fs-5 text-decoration-underline text-dark">Login</span>
+              <span onClick={isHaveAccount} className="fs-5 text-decoration-underline text-dark">Login</span>
             </div>
           </div>
 
           {/* Activated if login is pressed. */}
           <div className='w-50'>
-            <Login 
+            <Login
               loginDisplayState={loginDisplayState}
-              checkTheUser={checkTheUser} />            
-            <LoginGoogle 
+              checkTheUser={checkTheUser} />
+            <LoginGoogle
               displayState={loginDisplayState}
-              googleText="Login with Google"/>
+              googleText="Login with Google" />
           </div>
 
         </div>
 
 
-         {/* right side of the page (main thema) */}
+        {/* right side of the page (main thema) */}
         <div className='col-lg-6 col-md-12 bg'>
           <div className='p-3 w-75 mainHeading'>
             <Heading title="Your diet is a bank account. Good food choices are good investments." />
           </div>
         </div>
-      
+
       </div>
     </div>
   );
