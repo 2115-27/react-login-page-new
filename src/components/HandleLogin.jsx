@@ -1,5 +1,5 @@
 import React from "react";
-import './src/App.css';
+import './App1.css';
 
 const Home = () => {
   const handleClick = async () => {
