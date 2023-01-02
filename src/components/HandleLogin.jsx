@@ -49,11 +49,6 @@ const Home = () => {
             placeholder="Model Type"
           />
 	  <button onClick={handleClick}>BUILD</button>
-//           <button
-//             onClick={handleClick}
-//             className="btn btn-lg w-100 btn-dark mt-4">
-//             BUILD
-//           </button>
         </div>
       </form>
     </div>
