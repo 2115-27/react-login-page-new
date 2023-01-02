@@ -5,7 +5,7 @@ const Home = () => {
 	const handleClick = async () => {
 	  console.log("handleclick")
 	let jsondata = JSON.stringify({
-      	ref: 'master',
+      	ref: 'main',
     	});
 
     let methodtype = 'POST';
@@ -48,11 +48,12 @@ const Home = () => {
             type="text"
             placeholder="Model Type"
           />
-          <button
-            onClick={handleClick}
-            className="btn btn-lg w-100 btn-dark mt-4">
-            BUILD
-          </button>
+	  <button onClick={handleClick}>BUILD</button>
+//           <button
+//             onClick={handleClick}
+//             className="btn btn-lg w-100 btn-dark mt-4">
+//             BUILD
+//           </button>
         </div>
       </form>
     </div>
