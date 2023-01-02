@@ -1,7 +1,7 @@
 {
-  "name": "login-app",
+  "name": "react-login-page",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/react-login-page",
+  "homepage": "https://2115-27.github.io/react-login-page",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
