@@ -18,8 +18,7 @@ function App() {
   // States
   const [users, setUsers] = useState([]);
   const [formTitles, setFormTitles] = useState({
-    formTitle: "Create an account",
-    formSubtitle: "Let's get started with your 30 day free trial."
+    formTitle: "Sign up here !!"
   });
   const [displayState, setDisplayState] = useState("");
   const [loginDisplayState, setLoginDisplayState] = useState("d-none");
