@@ -28,13 +28,22 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
 
+#     - name: Install dependencies
+#       run: |
+#         npm install --package-lock false --force
+#         npm install @octokit/rest
+#         npm run build
+        
     - name: Install dependencies
       run: |
-        npm install --package-lock false --force
-        npm install @octokit/rest
-        npm run build
+        npm install
+        npm install react-bootstrap bootstrap
+        npm install octokit
         
-
+    - name: Build
+      run: npm run build
+      env:
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Deploy
       run: |
