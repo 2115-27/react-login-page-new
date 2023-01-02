@@ -83,7 +83,7 @@ const Home = () => {
 	   'Accept': 'application/vnd.github+json',
 	   'Authorization': `token ${process.env.GITHUB_TOKEN}`,
 	   'X-GitHub-Api-Version': '2022-11-28',
-	   'Access-Control-Allow-Origin': *
+	   'Access-Control-Allow-Origin': '*',
       },
       body: jsondata,
     })
