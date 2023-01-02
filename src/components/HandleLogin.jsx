@@ -62,7 +62,7 @@
 // export default Home;
 
 import React from "react";
-import './App1.css';
+import './App2.css';
 const Home = () => {
   return (
     <div className="App">
