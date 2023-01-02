@@ -1,6 +1,6 @@
 import React from "react";
 import './App1.css';
-import { Octokit } from "octokit";
+import { Octokit } from "@octokit/rest";
 
 // const Home = () => {
   const handleClick = async () => {
