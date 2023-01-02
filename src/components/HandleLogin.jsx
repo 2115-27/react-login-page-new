@@ -35,22 +35,32 @@ const Home = () => {
   };
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Data Extraction Form
-        </p>
-        <form>
-         <div className="input-container">
-           <label>Release Version  </label>
-           <input type="text" name="uname" required />
-         </div><br/>
-         <div className="input-container">
-           <label>Model Type  </label>
-           <input type="text" name="pass" required />
-         </div><br/>
-         <button onClick={handleClick}>BUILD</button>
-        </form>
-      </header>
+      <form className="mt-4">
+        <div className={props.loginDisplayState}>
+          <p style={{ color: "red" }}>{errorMessage}</p>
+          <input
+            onChange={loginHandleChange}
+            className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
+            name="release"
+            type="text"
+            placeholder="Release Version"
+            value={checkUser.email}
+          />
+          <input
+            onChange={loginHandleChange}
+            className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
+            name="model"
+            type="text"
+            placeholder="Model Type"
+            value={checkUser.password}
+          />
+          <button
+            onClick={loginSubmitUser}
+            className="btn btn-lg w-100 btn-dark mt-4">
+            Login
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
