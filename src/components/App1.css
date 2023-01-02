@@ -1,7 +1,8 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Oswald', sans-serif !important;
 }
 
+/* Background Image */
 .bg {
   height: 100vh;
   background-image: url("/public/home-page.jpg");
@@ -12,37 +13,27 @@
   height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainHeading h1{
+  font-size: 3rem;
+  text-shadow: 1px 1px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+form input, p, form button, .googleLogDiv {
+  letter-spacing: 1.2px;
+}
+
+.footerP p{
+  text-align: center;
+  width: 100% !important;
+}
+
+.footerP span {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .row {
+    flex-direction: column-reverse;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
