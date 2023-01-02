@@ -37,6 +37,7 @@ const Home = () => {
     <div className="w-100">
       <form className="mt-4">
         <div className={props.loginDisplayState}>
+	  <h1>Data Extraction Form</h1>
           <p style={{ color: "red" }}>{errorMessage}</p>
           <input
             className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
