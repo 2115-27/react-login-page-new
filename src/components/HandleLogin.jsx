@@ -64,6 +64,9 @@
 import React from "react";
 import './App2.css';
 const Home = () => {
+  const handleClick = async () => {
+	  console.log("handleclick")
+    	};
   return (
     <div className="App">
       <header className="App-header">
@@ -79,7 +82,7 @@ const Home = () => {
            <label>Model Type  </label>
            <input type="text" name="pass" required />
          </div><br/>
-         <button type="button" class="build-button">BUILD</button>
+         <button onClick={handleClick}>BUILD</button>
         </form>
       </header>
     </div>
