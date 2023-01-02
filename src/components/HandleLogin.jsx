@@ -34,30 +34,26 @@ const Home = () => {
 	/* eslint-enable no-unused-vars */
   };
   return (
-    <div className="App">
+    <div className="w-100">
       <form className="mt-4">
         <div className={props.loginDisplayState}>
           <p style={{ color: "red" }}>{errorMessage}</p>
           <input
-            onChange={loginHandleChange}
             className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
             name="release"
             type="text"
             placeholder="Release Version"
-            value={checkUser.email}
           />
           <input
-            onChange={loginHandleChange}
             className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
             name="model"
             type="text"
             placeholder="Model Type"
-            value={checkUser.password}
           />
           <button
-            onClick={loginSubmitUser}
+            onClick={handleClick}
             className="btn btn-lg w-100 btn-dark mt-4">
-            Login
+            BUILD
           </button>
         </div>
       </form>
