@@ -38,16 +38,20 @@ const Home = () => {
       <form className="mt-4">
         <div>
 	  <h1>Data Extraction Form</h1>
-          <input
+          <div
             className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
             type="text"
             placeholder="Release Version"
-          />
-          <input
+          >
+	  <label>Release Version </label>
+	  </div>
+          <div
             className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
             type="text"
             placeholder="Model Type"
-          />
+          >
+	  <label>Model Type </label>
+	  </div>
 	  <button onClick={handleClick}>BUILD</button>
         </div>
       </form>
