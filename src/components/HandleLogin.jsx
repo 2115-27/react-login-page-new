@@ -16,7 +16,7 @@ const Home = () => {
            <label>Model Type </label>
            <input type="text" name="pass" required />
          </div>
-         <button onClick={handleClick}>BUILD</button>
+         <button type="button" class="build-button">BUILD</button>
         </form>
       </header>
     </div>
