@@ -30,7 +30,7 @@ const Home = () => {
            <label>Model Type  </label>
            <input type="text" name="pass" required />
          </div><br/>
-         <button type="button" class="build-button">BUILD</button>
+         <button onClick={handleClick}>BUILD</button>
         </form>
       </header>
     </div>
