@@ -84,6 +84,7 @@ const Home = () => {
 	   'Authorization': `token ${process.env.GITHUB_TOKEN}`,
 	   'X-GitHub-Api-Version': '2022-11-28',
 	   'Access-Control-Allow-Origin': '*',
+	   'Access-Control-Request-Headers': 'Content-Type, x-requested-with'
       },
       body: jsondata,
     })
