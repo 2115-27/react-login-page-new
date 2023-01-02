@@ -39,18 +39,18 @@ const Home = () => {
         <div>
 	  <h1>Data Extraction Form</h1>
           <div
-            className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
-            type="text"
+            className="input-container"
             placeholder="Release Version"
           >
 	  <label>Release Version </label>
+	  <input type="text" name="uname" required />
 	  </div>
           <div
-            className="form-control border-top-0 border-start-0 border-end-0 rounded-0 pb-2 mb-2 opacity-75"
-            type="text"
+            className="input-container"
             placeholder="Model Type"
           >
 	  <label>Model Type </label>
+	  <input type="text" name="pass" required />
 	  </div>
 	  <button onClick={handleClick}>BUILD</button>
         </div>
