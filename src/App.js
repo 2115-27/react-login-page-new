@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Heading from './components/Heading';
 import Paragraph from './components/Paragraph';
 import CreateUser from './components/CreateUser';
-import LoginGoogle from './components/LoginGoogle';
+// import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
 import { useState, useEffect } from 'react';
 import { gapi } from "gapi-script";
@@ -123,34 +123,34 @@ function App() {
           </div>
           <Paragraph subtitle={formTitles.formSubtitle} />
           <p className="w-50" style={{ color: "red" }}>{errorLogin}</p>
-//           <div className='w-50'>
+          <div className='w-50'>
 
-//             <CreateUser
-//               addUser={addNewUser}
-//               displayState={displayState}
-//             />
-//             <LoginGoogle
-//               displayState={displayState}
-//               googleText="Sign up with Google"
-//             />
-//           </div>
+            <CreateUser
+              addUser={addNewUser}
+              displayState={displayState}
+            />
+            <LoginGoogle
+              displayState={displayState}
+              googleText="Sign up with Google"
+            />
+          </div>
 
-//           <div className="footerP">
-//             <div className={displayState}>
-//               <Paragraph subtitle="Already have an account?" />
-//               <span onClick={isHaveAccount} className="fs-5 text-decoration-underline text-dark">Login</span>
-//             </div>
-//           </div>
+          <div className="footerP">
+            <div className={displayState}>
+              <Paragraph subtitle="Already have an account?" />
+              <span onClick={isHaveAccount} className="fs-5 text-decoration-underline text-dark">Login</span>
+            </div>
+          </div>
 
           {/* Activated if login is pressed. */}
-//           <div className='w-50'>
-//             <Login
-//               loginDisplayState={loginDisplayState}
-//               checkTheUser={checkTheUser} />
-//             <LoginGoogle
-//               displayState={loginDisplayState}
-//               googleText="Login with Google" />
-//           </div>
+          <div className='w-50'>
+            <Login
+              loginDisplayState={loginDisplayState}
+              checkTheUser={checkTheUser} />
+            <LoginGoogle
+              displayState={loginDisplayState}
+              googleText="Login with Google" />
+          </div>
 
         </div>
 
