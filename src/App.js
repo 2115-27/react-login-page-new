@@ -129,10 +129,10 @@ function App() {
               addUser={addNewUser}
               displayState={displayState}
             />
-            <LoginGoogle
-              displayState={displayState}
-              googleText="Sign up with Google"
-            />
+//             <LoginGoogle
+//               displayState={displayState}
+//               googleText="Sign up with Google"
+//             />
           </div>
 
           <div className="footerP">
@@ -147,9 +147,9 @@ function App() {
             <Login
               loginDisplayState={loginDisplayState}
               checkTheUser={checkTheUser} />
-            <LoginGoogle
-              displayState={loginDisplayState}
-              googleText="Login with Google" />
+//             <LoginGoogle
+//               displayState={loginDisplayState}
+//               googleText="Login with Google" />
           </div>
 
         </div>
