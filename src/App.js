@@ -135,12 +135,12 @@ function App() {
 //             />
 //           </div>
 
-          <div className="footerP">
-            <div className={displayState}>
-              <Paragraph subtitle="Already have an account?" />
-              <span onClick={isHaveAccount} className="fs-5 text-decoration-underline text-dark">Login</span>
-            </div>
-          </div>
+//           <div className="footerP">
+//             <div className={displayState}>
+//               <Paragraph subtitle="Already have an account?" />
+//               <span onClick={isHaveAccount} className="fs-5 text-decoration-underline text-dark">Login</span>
+//             </div>
+//           </div>
 
           {/* Activated if login is pressed. */}
 //           <div className='w-50'>
