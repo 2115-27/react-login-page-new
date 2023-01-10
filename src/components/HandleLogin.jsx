@@ -104,11 +104,43 @@ const Home = () => {
         </p>
         <form>
          <div className="input-container">
-           <label>Release Version  </label>
+           <label>Target Environment  </label>
            <input type="text" name="uname" required />
          </div><br/>
          <div className="input-container">
-           <label>Model Type  </label>
+           <label>Source Environment  </label>
+           <input type="text" name="pass" required />
+         </div><br/>
+	  <div className="input-container">
+           <label>Brand  </label>
+           <input type="text" name="pass" required />
+         </div><br/>
+	  <div className="input-container">
+           <label>Data Type  </label>
+           <input type="text" name="pass" required />
+         </div><br/>
+	  <div className="input-container">
+           <label>PriceListID  </label>
+           <input type="text" name="pass" required />
+         </div><br/>
+	  <div className="input-container">
+           <label>Product Category  </label>
+           <input type="text" name="pass" required />
+         </div><br/>
+	  <div className="input-container">
+           <label>Model Range  </label>
+           <input type="text" name="pass" required />
+         </div><br/>
+	  <div className="input-container">
+           <label>Publish Country Rule  </label>
+           <input type="text" name="pass" required />
+         </div><br/>
+	  <div className="input-container">
+           <label>Back Date  </label>
+           <input type="text" name="pass" required />
+         </div><br/>
+	  <div className="input-container">
+           <label>Copy Warmup  </label>
            <input type="text" name="pass" required />
          </div><br/>
          <button onClick={handleClick}>BUILD</button>
