@@ -123,17 +123,17 @@ function App() {
           </div>
           <Paragraph subtitle={formTitles.formSubtitle} />
           <p className="w-50" style={{ color: "red" }}>{errorLogin}</p>
-//           <div className='w-50'>
+          <div className='w-50'>
 
-//             <CreateUser
-//               addUser={addNewUser}
-//               displayState={displayState}
-//             />
-//           </div>
-//             <LoginGoogle
-//               displayState={displayState}
-//               googleText="Sign up with Google"
-//             />
+            <CreateUser
+              addUser={addNewUser}
+              displayState={displayState}
+            />
+          </div>
+            <LoginGoogle
+              displayState={displayState}
+              googleText="Sign up with Google"
+            />
           
 
           <div className="footerP">
@@ -144,17 +144,17 @@ function App() {
           </div>
 
           {/* Activated if login is pressed. */}
-//           <div className='w-50'>
-//             <Login
-//               loginDisplayState={loginDisplayState}
-//               checkTheUser={checkTheUser} />
-//           </div>
-// //             <LoginGoogle
-// //               displayState={loginDisplayState}
-// //               googleText="Login with Google" />
+          <div className='w-50'>
+            <Login
+              loginDisplayState={loginDisplayState}
+              checkTheUser={checkTheUser} />
+          </div>
+            <LoginGoogle
+              displayState={loginDisplayState}
+              googleText="Login with Google" />
           
 
-//         </div>
+         </div>
 
 
         {/* right side of the page (main thema) */}
