@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Heading from './components/Heading';
 import Paragraph from './components/Paragraph';
 import CreateUser from './components/CreateUser';
-// import LoginGoogle from './components/LoginGoogle';
+import LoginGoogle from './components/LoginGoogle';
 import Login from './components/Login';
 import { useState, useEffect } from 'react';
 import { gapi } from "gapi-script";
